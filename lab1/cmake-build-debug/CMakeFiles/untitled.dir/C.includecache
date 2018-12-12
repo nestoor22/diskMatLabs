@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/university/labs/diskmath/lab1/LogCon.h
+
+D:/university/labs/diskmath/lab1/main.c
+stdio.h
+-
+LogCon.h
+D:/university/labs/diskmath/lab1/LogCon.h
+
