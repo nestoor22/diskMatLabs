@@ -3,6 +3,7 @@
 #include "Komb.h"
 
 int main() {
+    int i,j;
     size_t n = 0;
     int N, M, res = 0;
     printf("Enter 1 for permutation, 2 for combination, 3 for exit \n");
@@ -15,11 +16,11 @@ int main() {
                     scanf("%i", &n);
                     int A[n];
                     printf("Enter element: ");
-                    for (int i = 0; i < n; i++)
+                    for (i = 0; i < n; i++)
                         scanf("%d", &A[i]);
                     qsort(A, n, sizeof(int), cmp);
                     do {
-                        for (int i = 0; i < n; i++)
+                        for (i = 0; i < n; i++)
                             printf("%d ", A[i]);
                         printf("\n");
                     } while (GenP(A, n));
@@ -38,13 +39,13 @@ int main() {
                     m++;
                 }
                 printf("\n");
-                for (int j = 0; j < M; j++) {
+                for (j = 0; j < M; j++) {
                     printf("%i ", B[j]);
                 }
                 printf("\n");
-                for (int i = 0; i < 14; i++) {
+                for (i = 1; i < cnk(N,M); i++) {
                     GenC(B, N, M);
-                    for (int j = 0; j < M; j++) {
+                    for(j = 0; j < M; j++) {
                         printf("%i ", B[j]);
                     }
                     printf("\n");

@@ -37,16 +37,27 @@ int GenP(int *A,int n)
 }
 int GenC(int *A, int n, int k)
 {
-    for (int i=k-1;i>=0;i--)
+    int i,j;
+    for (i=k-1;i>=0;i--)
     {
         if(A[i]!=n-k+i+1)
         {
             A[i]=A[i]+1;
-            for(int j=i+1;j<=k-1;j++)
+            for(j=i+1;j<=k-1;j++)
             {
                 A[j]=A[j-1]+1;
             }
             return 1;
         }
     }
+}
+int fact(int n){
+    if (n == 0){
+        return 1;
+    } else{
+        return n*fact(n-1);
+    }
+}
+int cnk(int n,int k){
+    return fact(n)/(fact(k)*fact(n-k));
 }
